@@ -18,165 +18,170 @@
         </div>
     </header>
     <div class="wrapper">
-        <form id="register">
-            <div class="main-form">
-                <h1 class="title">Calculadora IMC</h1>
-                <h4 class="description">Descubra su indice de masa corporal</h4>
-                <div>
-                    <div class="items">
-                        <label for="name">Nombre</label>
-                        <input id="firtsName" type="text" name="nombre">
+        <div>
+            <form id="register">
+                <div class="main-form">
+                    <h1 class="title">Calculadora IMC</h1>
+                    <h4 class="description">Descubra su indice de masa corporal</h4>
+                    <div>
+                        <div class="items">
+                            <label for="name">Nombre</label>
+                            <input id="firtsName" type="text" name="nombre">
+                        </div>
+                        <div class="items">
+                            <label for="lastName">Apellido</label>
+                            <input id="lastName" type="text" name="apellido">
+                        </div>
+                        <div class="items">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="text" name="email">
+                        </div>
                     </div>
                     <div class="items">
-                        <label for="lastName">Apellido</label>
-                        <input id="lastName" type="text" name="apellido">
+                        <label for="">Sexo: </label>
+                        <button id="man" type="button" class="sex">
+                            <span>
+                                <img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png"
+                                    alt="masculino">
+                            </span>
+                        </button>
+                        <button id="woman" type="button" class="sex">
+                            <span>
+                                <img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png"
+                                    alt="femenino">
+                            </span>
+                        </button>
                     </div>
                     <div class="items">
-                        <label for="email">E-mail</label>
-                        <input id="email" type="text" name="email">
+                        <label for="edad">Edad</label>
+                        <input id="edad" type="number" name="edad">
                     </div>
+                    <div class="items">
+                        <label for="peso">Peso</label>
+                        <input id="peso" type="number" name="peso">
+                        <span class="anthropometric">KG</span>
+                    </div>
+                    <div class="items">
+                        <label for="altura">Altura</label>
+                        <input id="altura" type="number" name="altura" step="0.01">
+                        <span class="anthropometric">M</span>
+                    </div>
+                    <input class="btn-calcular" type="submit" value="CALCULAR IMC">
                 </div>
-                <div class="items">
-                    <label for="">Sexo: </label>
-                    <button id="man" type="button" class="sex">
-                        <span>
-                            <img src="https://icones.pro/wp-content/uploads/2021/02/icone-png-symbole-masculin-gris.png"
-                                alt="masculino">
-                        </span>
-                    </button>
-                    <button id="woman" type="button" class="sex">
-                        <span>
-                            <img src="https://icones.pro/wp-content/uploads/2021/03/symbole-feminin-icone-grise.png"
-                                alt="femenino">
-                        </span>
-                    </button>
-                </div>
-                <div class="items">
-                    <label for="edad">Edad</label>
-                    <input id="edad" type="number" name="edad">
-                </div>
-                <div class="items">
-                    <label for="peso">Peso</label>
-                    <input id="peso" type="number" name="peso">
-                    <span class="anthropometric">KG</span>
-                </div>
-                <div class="items">
-                    <label for="altura">Altura</label>
-                    <input id="altura" type="number" name="altura" step="0.01">
-                    <span class="anthropometric">M</span>
-                </div>
-                <input class="btn-calcular" type="submit" value="CALCULAR IMC">
-            </div>
-        </form>
-        <div class="result">
-            <h2>Resultados</h2>
-            <div class="item-result">
-                <label for="lastName-result">Nombre:</label>
-                <p id="name-result">-</p>
-            </div>
-            <div class="item-result">
-                <label for="lastName-result">Apellido:</label>
-                <p id="lastName-result">-</p>
-            </div>
-            <div class="item-result">
-                <label for="sexo">Sexo:</label>
-                <p id="sexo">-</p>
-            </div>
-            <div class="item-result">
-                <label for="edad-result">Edad:</label>
-                <p id="edad-result">0 Años</p>
-            </div>
-            <div class="item-result">
-                <label for="peso-result">Peso:</label>
-                <p id="peso-result">0 Kg</p>
-            </div>
-            <div class="item-result">
-                <label for="altura-result">Altura:</label>
-                <p id="altura-result">0 Mts</p>
-            </div>
-            <div class="item-result">
-                <label id="imc-label" for="imc">IMC:</label>
-                <p id="imc">0,00</p>
-            </div>
-            <div class="item-result">
-                <p id="description-result"></p>
-            </div>
+            </form>
             <div>
-                <img src="./image/imc.jpg" alt="imc" width="500">
+                <table>
+                    <thead>
+                        <td>Categoria</td>
+
+                        <td>Mujer</td>
+
+                        <td>Hombre</td>
+
+                        <td>General</td>
+
+                    </thead>
+                    <tr>
+
+                        <td id="bajo">Bajo</td>
+
+                        <td id="mujer-bajo">0</td>
+
+                        <td id="hombre-bajo">0</td>
+
+                        <td id="general-bajo">0</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Normal</td>
+
+                        <td id="mujer-normal">0</td>
+
+                        <td id="hombre-normal">0</td>
+
+                        <td id="general-normal">0</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Obeso</td>
+
+                        <td id="mujer-obeso">0</td>
+
+                        <td id="hombre-obeso">0</td>
+
+                        <td id="general-obeso">0</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Sobrepeso</td>
+
+                        <td id="mujer-sobrepeso">0</td>
+
+                        <td id="hombre-sobrepeso">0</td>
+
+                        <td id="general-sobrepeso">0</td>
+
+                    </tr>
+                    <tr>
+
+                        <td>Obesidad Extrema</td>
+
+                        <td id="mujer-extrema">0</td>
+
+                        <td id="hombre-extrema">0</td>
+
+                        <td id="general-extrema">0</td>
+
+                    </tr>
+
+                </table>
             </div>
         </div>
-    </div>
-    <div>
-        <table>
-            <thead>
-                <td>Categoria</td>
+        <div>
+            <div class="result">
+                <h2>Resultados</h2>
+                <div class="item-result">
+                    <label for="lastName-result">Nombre:</label>
+                    <p id="name-result">-</p>
+                </div>
+                <div class="item-result">
+                    <label for="lastName-result">Apellido:</label>
+                    <p id="lastName-result">-</p>
+                </div>
+                <div class="item-result">
+                    <label for="sexo">Sexo:</label>
+                    <p id="sexo">-</p>
+                </div>
+                <div class="item-result">
+                    <label for="edad-result">Edad:</label>
+                    <p id="edad-result">0 Años</p>
+                </div>
+                <div class="item-result">
+                    <label for="peso-result">Peso:</label>
+                    <p id="peso-result">0 Kg</p>
+                </div>
+                <div class="item-result">
+                    <label for="altura-result">Altura:</label>
+                    <p id="altura-result">0 Mts</p>
+                </div>
+                <div class="item-result">
+                    <label id="imc-label" for="imc">IMC:</label>
+                    <p id="imc">0,00</p>
+                </div>
+                <div class="item-result">
+                    <p id="description-result"></p>
+                </div>
+                <div>
+                    <img src="./image/imc.jpg" alt="imc" width="500">
+                </div>
+            </div>
+        </div>
 
-                <td>Mujer</td>
-
-                <td>Hombre</td>
-
-                <td>General</td>
-
-            </thead>
-            <tr>
-
-                <td id="bajo">Bajo</td>
-
-                <td id="mujer-bajo"></td>
-
-                <td id="hombre-bajo"></td>
-
-                <td id="general-bajo"></td>
-
-            </tr>
-            <tr>
-
-                <td>Normal</td>
-
-                <td id="mujer-normal"></td>
-
-                <td id="hombre-normal"></td>
-                
-                <td id="general-normal"></td>
-
-            </tr>
-            <tr>
-
-                <td>Obeso</td>
-
-                <td id="mujer-obeso"></td>
-
-                <td id="hombre-obeso"></td>
-                
-                <td id="general-obeso"></td>
-
-            </tr>
-            <tr>
-
-                <td>Sobrepeso</td>
-
-                <td id="mujer-sobrepeso"></td>
-
-                <td id="hombre-sobrepeso"></td>
-                
-                <td id="general-sobrepeso"></td>
-
-            </tr>
-            <tr>
-
-                <td>Obesidad Extrema</td>
-
-                <td id="mujer-extrema"></td>
-
-                <td id="hombre-extrema"></td>
-                
-                <td id="general-extrema"></td>
-
-            </tr>
-
-        </table>
-    </div>
-    <script src="./js/form.js" type="module"></script>
+        <script src="./js/form.js" type="module"></script>
+        
 </body>
 
 </html>

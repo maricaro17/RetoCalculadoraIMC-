@@ -1,86 +1,101 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .logo img{
-    width: 200px;
-    padding-left: 130px;
-    
-  }
-  .wrapper {
-    max-width: 80%;
-    display: flex;
-    background-color: #f6f6f6;
-    margin: 0 auto;
-    justify-content: center;
-  }
-  
-  .main-form {
-    width: 300px;
-    margin: 10px;
-    padding: 10px;
-    background-color: white;
-  }
-  
-  .result {
-    width: 500px;
-    margin: 10px;
-    padding: 20px;
-    background-color: white;
-  }
-  
-  .item-result {
-    display: flex;
-  }
-  .item-result p {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  .item-result label {
-    margin-right: 10px;
-  }
-  .sex {
-    border: 1px solid white;
-    margin: 2px;
-  }
-  .sex span img {
-    width: 25px;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo img {
+  width: 200px;
+  padding-left: 130px;
+}
+.wrapper {
+  max-width: 80%;
+  display: flex;
+  background-color: white;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.main-form {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.result {
+  width: 500px;
+  margin: 10px;
+  padding: 20px;
+  background-color: white;
+}
+
+.item-result {
+  display: flex;
+}
+.item-result p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.item-result label {
+  margin-right: 10px;
+}
+.sex {
+  border: 1px solid white;
+  margin: 2px;
+}
+.sex span img {
+  width: 25px;
+}
 
 .anthropometric {
-    color: #03db03;
-    margin-left: 5px;
-  }
-  .btn-calcular {
-    display: flex;
-    background-color: #03db03;
-    color: white;
-    width: 100%;
-    justify-content: center;
-    padding: 15px;
-    border: none;
-  }
-  
-  .items {
-    display: flex;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    align-items: center;
-  }
-  .items label {
-    margin-right: 5px;
-  }
+  color: #03db03;
+  margin-left: 5px;
+}
+.btn-calcular {
+  display: flex;
+  background-color: #03db03;
+  color: white;
+  width: 100%;
+  justify-content: center;
+  padding: 15px;
+  border: none;
+}
 
-  .title {
-    background-color: #03db03;
-    color: white;
-    text-align: center;
-  }
-  .description {
-    color: gray;
-  }
+.items {
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.items label {
+  margin-right: 5px;
+}
 
-  #imc-label,
-  #imc {
-    font-size: 40pt;
-  }
+.title {
+  background-color: #03db03;
+  color: white;
+  text-align: center;
+}
+.description {
+  color: gray;
+}
+
+#imc-label,
+#imc {
+  font-size: 40pt;
+}
+thead {
+  font-weight: bold;
+  text-align: center;
+}
+table {
+  background-color: ghostwhite;
+  color: cadetblue;
+  text-align: center;
+  border: double;
+  margin: auto;
+}
+footer {
+  text-align: center;
+  font-size: 14pt;
+  color: black;
+}
