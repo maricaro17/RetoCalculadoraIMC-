@@ -26,15 +26,15 @@
                     <div>
                         <div class="items">
                             <label for="name">Nombre</label>
-                            <input id="firtsName" type="text" name="nombre">
+                            <input id="firtsName" type="text" name="nombre" required>
                         </div>
                         <div class="items">
                             <label for="lastName">Apellido</label>
-                            <input id="lastName" type="text" name="apellido">
+                            <input id="lastName" type="text" name="apellido" required>
                         </div>
                         <div class="items">
                             <label for="email">E-mail</label>
-                            <input id="email" type="text" name="email">
+                            <input id="email" type="email" name="email" required>
                         </div>
                     </div>
                     <div class="items">
@@ -54,16 +54,16 @@
                     </div>
                     <div class="items">
                         <label for="edad">Edad</label>
-                        <input id="edad" type="number" name="edad">
+                        <input id="edad" type="number" name="edad" required>
                     </div>
                     <div class="items">
                         <label for="peso">Peso</label>
-                        <input id="peso" type="number" name="peso">
+                        <input id="peso" type="number" name="peso" required>
                         <span class="anthropometric">KG</span>
                     </div>
                     <div class="items">
                         <label for="altura">Altura</label>
-                        <input id="altura" type="number" name="altura" step="0.01">
+                        <input id="altura" type="number" name="altura" step="0.01" required>
                         <span class="anthropometric">M</span>
                     </div>
                     <input class="btn-calcular" type="submit" value="CALCULAR IMC">
@@ -181,7 +181,7 @@
         </div>
 
         <script src="./js/form.js" type="module"></script>
-        
+
 </body>
 
 </html>

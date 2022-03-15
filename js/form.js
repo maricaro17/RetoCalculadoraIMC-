@@ -46,9 +46,28 @@ const getUser = (user) => {
   return users.find((element) => element.email === user.email);
 };
 
+const { bajo, normal, medio, alto, extremo } = getEstadisticas();
+const cargarEstadisticas = () => {
+  mujerBajo.innerHTML = bajo.mujer;
+  hombreBajo.innerHTML = bajo.hombre;
+  generalBajo.innerHTML = bajo.general;
+  mujerNormal.innerHTML = normal.mujer;
+  hombreNormal.innerHTML = normal.hombre;
+  generalNormal.innerHTML = normal.general;
+  mujerSobrepeso.innerHTML = medio.mujer;
+  hombreSobrepeso.innerHTML = medio.hombre;
+  generalSobrepeso.innerHTML = medio.general;
+  mujerObeso.innerHTML = alto.mujer;
+  hombreObeso.innerHTML = alto.hombre;
+  generalObeso.innerHTML = alto.general;
+  mujerExtremo.innerHTML = extremo.mujer;
+  hombreExtremo.innerHTML = extremo.hombre;
+  generalExtremo.innerHTML = extremo.general;
+};
 const submit = (e) => {
   e.preventDefault();
   const { firtsName, lastName, email, edad, peso, altura } = e.target;
+
   const data = {
     name: firtsName.value,
     lastName: lastName.value,
@@ -66,7 +85,7 @@ const submit = (e) => {
   if (!user) {
     users.push(userInfo);
     setItem("users", users);
-    const { bajo, normal, medio, alto, extremo } = getEstadisticas();
+
     form.reset();
     nameResult.innerHTML = userInfo.name;
     lastNameResult.innerHTML = userInfo.lastName;
@@ -77,26 +96,11 @@ const submit = (e) => {
     imcResult.innerHTML = imc.toFixed(2);
     imcResult.style.color = obecity.color;
     descriptionResult.innerHTML = obecity.message;
-    mujerBajo.innerHTML = bajo.mujer;
-    hombreBajo.innerHTML = bajo.hombre;
-    generalBajo.innerHTML = bajo.general;
-    mujerNormal.innerHTML = normal.mujer;
-    hombreNormal.innerHTML = normal.hombre;
-    generalNormal.innerHTML = normal.general;
-    mujerSobrepeso.innerHTML = medio.mujer;
-    hombreSobrepeso.innerHTML = medio.hombre;
-    generalSobrepeso.innerHTML = medio.general;
-    mujerObeso.innerHTML = alto.mujer;
-    hombreObeso.innerHTML = alto.hombre;
-    generalObeso.innerHTML = alto.general;
-    mujerExtremo.innerHTML = extremo.mujer;
-    hombreExtremo.innerHTML = extremo.hombre;
-    generalExtremo.innerHTML = extremo.general;
   } else {
     alert("El usuario ya existe");
     form.reset();
   }
+  cargarEstadisticas();
 };
-
-
+document.onload = cargarEstadisticas();
 form.addEventListener("submit", (e) => submit(e));
